@@ -1,18 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// Flutter code sample for [BottomNavigationBar].
-
-class BottomNavigationBarExampleApp extends StatelessWidget {
-  const BottomNavigationBarExampleApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-        //lol
-        );
-  }
-}
-
 class BottomNavigationBarExample extends StatefulWidget {
   const BottomNavigationBarExample({super.key});
 
@@ -34,7 +21,7 @@ class _BottomNavigationBarExampleState
       style: optionStyle,
     ),
     Text(
-      'Index 1: Coffee',
+      'Index 1: MyFavCoffee',
       style: optionStyle,
     ),
     Text(
@@ -75,7 +62,7 @@ class _BottomNavigationBarExampleState
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.coffee),
-            label: 'Coffee',
+            label: 'MyFavCoffee',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.coffee_maker),
@@ -93,43 +80,3 @@ class _BottomNavigationBarExampleState
     );
   }
 }
-/*class Bottomnavigationbar extends StatefulWidget {
-  const Bottomnavigationbar({super.key});
-
-  @override
-  State<Bottomnavigationbar> createState() => _Bottomnavigationbarstate();
-}
-
-class _Bottomnavigationbar extends State<Bottomnavigationbar> {
-  var _currentPage = 0;
-  var _pages = [Text("Página 1"), Text("Página 2"), Text("Página 3")];
-  var _colores = [Colors.green[200], Colors.yellow, Colors.blue[200]];
-  var _color = 0;
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-        title: "BottomNavigationBar",
-        home: Scaffold(
-            backgroundColor: _colores[_color],
-            body: Center(child: _pages.elementAt(_currentPage)),
-            bottomNavigationBar: BottomNavigationBar(
-                items: [
-                  BottomNavigationBarItem(
-                      icon: Icon(Icons.announcement), title: Text("Avisos")),
-                  BottomNavigationBarItem(
-                      icon: Icon(Icons.cake), title: Text("Cumpleaños")),
-                  BottomNavigationBarItem(
-                      icon: Icon(Icons.cloud), title: Text("Datos")),
-                ],
-                currentIndex: _currentPage,
-                fixedColor: Colors.red,
-                onTap: (int inIndex) {
-                  setState(() {
-                    _currentPage = inIndex;
-                    _color = inIndex;
-                  });
-                })));
-  }
-}
-*/

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:homecoffe/pages/bottomnavigationbar.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -21,34 +22,39 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
+      appBar:
+          AppBar(backgroundColor: Theme.of(context).colorScheme.inversePrimary),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
-      persistentFooterButtons: [
-        ElevatedButton(onPressed: _incrementCounter, child: Icon(Icons.home)),
-        ElevatedButton(onPressed: _incrementCounter, child: Icon(Icons.coffee)),
-        ElevatedButton(onPressed: _incrementCounter, child: Icon(Icons.person)),
-      ],
+          child: Card(
+        elevation: 10,
+        color: Color.fromARGB(248, 250, 239, 229),
+        child: SizedBox(
+            width: 300,
+            height: 300,
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ElevatedButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: const Text('Volver')),
+                      ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        BottomNavigationBarExample()));
+                          },
+                          child: const Text('Siguiente')),
+                    ],
+                  ),
+                ])),
+      )),
     );
   }
 }
