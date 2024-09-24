@@ -29,8 +29,8 @@ class _MyHomePageState extends State<MyHomePage> {
         elevation: 10,
         color: Color.fromARGB(248, 250, 239, 229),
         child: SizedBox(
-            width: 300,
-            height: 300,
+            width: 450,
+            height: 520,
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[

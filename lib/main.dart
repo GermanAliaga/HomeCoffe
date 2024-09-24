@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:homecoffe/pages/bottomnavigationbar.dart';
+import 'package:homecoffe/pages/iniciosesion.dart';
 import 'package:homecoffe/pages/myhomepage.dart';
 
 void main() {
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Caramel',
       ),
       //home: const BottomNavigationBarExample(),
-      home: const MyHomePage(title: 'HomeCoffee'),
+      //home: const MyHomePage(title: 'HomeCoffee'),
+      home: const Iniciosesion(title: 'Inicio de sesión'),
     );
   }
 }
