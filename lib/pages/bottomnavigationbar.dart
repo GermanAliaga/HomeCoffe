@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:homecoffe/pages/favcoffees.dart';
 
 class BottomNavigationBarExample extends StatefulWidget {
   const BottomNavigationBarExample({super.key});
@@ -37,6 +38,31 @@ class _BottomNavigationBarExampleState
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+      if (_selectedIndex == 0) {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) =>
+                    FavoriteCoffees(title: 'Cafés favoritos')));
+      } else if (_selectedIndex == 1) {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) =>
+                    FavoriteCoffees(title: 'Cafés favoritos')));
+      } else if (_selectedIndex == 2) {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) =>
+                    FavoriteCoffees(title: 'Cafés favoritos')));
+      } else if (_selectedIndex == 3) {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) =>
+                    FavoriteCoffees(title: 'Cafés favoritos')));
+      }
     });
   }
 

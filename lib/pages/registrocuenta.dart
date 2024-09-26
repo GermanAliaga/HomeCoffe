@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:homecoffe/pages/bottomnavigationbar.dart';
 import 'package:homecoffe/pages/myhomepage.dart';
 
 class Registrocuenta extends StatefulWidget {
@@ -12,7 +13,7 @@ class Registrocuenta extends StatefulWidget {
 }
 
 class _RegistrocuentaState extends State<Registrocuenta> {
-  String logo = "assets/icons/185112_coffee_espresso_barista_icon.svg";
+  String logo = "assets/icons/3098737_coffee_machine2.svg";
 
   @override
   Widget build(BuildContext context) {
@@ -24,12 +25,12 @@ class _RegistrocuentaState extends State<Registrocuenta> {
             child: Padding(
           padding: const EdgeInsets.all(50.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               SvgPicture.asset(
                 logo,
                 semanticsLabel: 'Game app',
-                width: 70,
+                width: 100,
               ),
               TextField(
                   decoration: InputDecoration(
@@ -52,9 +53,9 @@ class _RegistrocuentaState extends State<Registrocuenta> {
                         context,
                         MaterialPageRoute(
                             builder: (context) =>
-                                MyHomePage(title: 'Homecoffee')));
+                                BottomNavigationBarExample()));
                   },
-                  child: const Text('Entrar'))
+                  child: const Text('Registrar'))
             ],
           ),
         )));
