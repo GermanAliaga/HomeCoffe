@@ -29,7 +29,7 @@ class _FavoriteCoffeesState extends State<FavoriteCoffees> {
             width: 400,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [CoffeCard()],
+              children: [],
             ),
           ),
         )));
