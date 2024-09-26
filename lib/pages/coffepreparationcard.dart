@@ -1,0 +1,51 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+
+class CoffeCard extends StatelessWidget {
+  const CoffeCard({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    String coffeImg = "assets/icons/5404318_coffee_cup_glass_hot_icon.svg";
+    String starImg = "assets/icons/216411_star_icon.svg";
+    String personImg = "assets/icons/9035990_person_circle_sharp_icon.svg";
+
+    return Scaffold(
+        body: Center(
+            child: Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: Card(
+          elevation: 10,
+          color: Color.fromARGB(248, 250, 239, 229),
+          child: Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SvgPicture.asset(personImg,
+                          semanticsLabel: 'perfil image', width: 50),
+                      const Text(
+                        'Affogato',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      SvgPicture.asset(
+                        starImg,
+                        semanticsLabel: 'calification',
+                        width: 25,
+                      ),
+                    ]),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
+                        'Este café se prepara de la siguiente manera:\nIngredientes:\n-100 ml de café\n-Helado de vainilla\nPreparación:\n'),
+                    SvgPicture.asset(coffeImg,
+                        semanticsLabel: 'Coffee image', width: 60)
+                  ],
+                ),
+              ])),
+    )));
+  }
+}
