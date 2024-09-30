@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:homecoffe/pages/favcoffees.dart';
 import 'package:homecoffe/pages/perfil.dart';
 import 'package:homecoffe/pages/products.dart';
+import 'package:homecoffe/pages/searchbar.dart';
 
 class BottomNavigationBarExample extends StatefulWidget {
   const BottomNavigationBarExample({super.key});
@@ -69,8 +70,15 @@ class _BottomNavigationBarExampleState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home'),
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        leading: SearchBar(
+          leading: Icon(Icons.search),
+          onTap: () {
+            setState(() {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Search()));
+            });
+          },
+        ),
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),

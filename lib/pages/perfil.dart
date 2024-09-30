@@ -7,6 +7,7 @@ import 'package:homecoffe/pages/coffepreparationcard.dart';
 import 'package:homecoffe/pages/favcoffees.dart';
 import 'package:homecoffe/pages/iniciosesion.dart';
 import 'package:homecoffe/pages/person.dart';
+import 'package:homecoffe/pages/searchbar.dart';
 
 class Perfil extends StatefulWidget {
   const Perfil({super.key});
@@ -140,7 +141,6 @@ class _PerfilState extends State<Perfil> {
             'Tus preparaciones:',
             style: TextStyle(fontSize: 20),
           ),
-          CoffeCard(),
         ]),
       )),
     );
