@@ -22,8 +22,6 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         fontFamily: 'Caramel',
       ),
-      //home: const BottomNavigationBarExample(),
-      //home: const MyHomePage(title: 'HomeCoffee'),
       home: const Iniciosesion(title: 'Inicio de sesión'),
     );
   }

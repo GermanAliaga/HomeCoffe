@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:homecoffe/pages/coffepreparationcard.dart';
+import 'package:homecoffe/pages/perfil.dart';
+import 'package:homecoffe/pages/person.dart';
 
 class AddCoffees extends StatefulWidget {
   const AddCoffees({super.key});
@@ -8,8 +11,75 @@ class AddCoffees extends StatefulWidget {
 }
 
 class _AddCoffeesState extends State<AddCoffees> {
+  Person cliente = new Person();
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: const Text('Creación nueva receta'),
+      ),
+      body: Center(
+        child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text(
+                  'Nombre receta:',
+                  style: TextStyle(fontSize: 15),
+                ),
+                TextField(
+                    decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: 'Ingresar nombre',
+                )),
+                Text(
+                  'Ingredientes',
+                  style: TextStyle(fontSize: 15),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton(onPressed: () {}, child: Text('+Leche')),
+                    ElevatedButton(onPressed: () {}, child: Text('+Crema')),
+                    ElevatedButton(onPressed: () {}, child: Text('+Café')),
+                    ElevatedButton(onPressed: () {}, child: Text('+Azúcar')),
+                  ],
+                ),
+                Text(
+                  'Herramientas',
+                  style: TextStyle(fontSize: 15),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton(
+                        onPressed: () {}, child: Text('+Cafetera italiana')),
+                    ElevatedButton(
+                        onPressed: () {}, child: Text('+Filtro papel')),
+                    ElevatedButton(onPressed: () {}, child: Text('+Espumador')),
+                  ],
+                ),
+                Text(
+                  'Preparación:',
+                  style: TextStyle(fontSize: 15),
+                ),
+                TextField(
+                    decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: 'Describir preparación',
+                )),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Perfil()));
+                    },
+                    child: Text('Crear receta')),
+              ],
+            )),
+      ),
+    );
   }
 }

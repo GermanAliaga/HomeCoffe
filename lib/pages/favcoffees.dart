@@ -15,23 +15,34 @@ class FavoriteCoffees extends StatefulWidget {
 }
 
 class _FavoriteCoffeesState extends State<FavoriteCoffees> {
+  List<int> bottom = <int>[0];
+
   @override
   Widget build(BuildContext context) {
+    const Key centerKey = ValueKey<String>('bottom-sliver-list');
     return Scaffold(
-        appBar: AppBar(
-            backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-            title: Text(widget.title)),
-        body: const Center(
-            child: const Padding(
-          padding: const EdgeInsets.all(5.0),
-          child: SizedBox(
-            height: 400,
-            width: 400,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [],
+      appBar: AppBar(
+        title: const Text('Preparaciones favoritas'),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      ),
+      body: CustomScrollView(
+        center: centerKey,
+        slivers: <Widget>[
+          SliverList(
+            key: centerKey,
+            delegate: SliverChildBuilderDelegate(
+              (BuildContext context, int index) {
+                return Container(
+                  alignment: Alignment.center,
+                  height: 300 + bottom[index] % 4 * 20.0,
+                  child: CoffeCard(),
+                );
+              },
+              childCount: bottom.length,
             ),
           ),
-        )));
+        ],
+      ),
+    );
   }
 }
