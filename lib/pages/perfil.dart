@@ -16,9 +16,13 @@ class Perfil extends StatefulWidget {
 }
 
 class _PerfilState extends State<Perfil> {
+  /*String personImg = "assets/icons/9035990_person_circle_sharp_icon.svg";
+  String starImg = "assets/icons/216411_star_icon.svg";
+  Person JoeDoe = new Person();
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+  return Scaffold(
         appBar: AppBar(
           title: const Text('Perfil'),
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -40,30 +44,61 @@ class _PerfilState extends State<Perfil> {
                         (BuildContext context, int index) {
                           return Container(
                             alignment: Alignment.center,
-                            color: Colors.teal[100 * (index % 9)],
-                            child: Text('Grid Item $index'),
+                            child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Column(
+                                    children: [
+                                      SvgPicture.asset(starImg,
+                                          semanticsLabel: 'calification',
+                                          width: 40),
+                                      Text(
+                                        '4.1',
+                                        style: TextStyle(fontSize: 20),
+                                      )
+                                    ],
+                                  ),
+                                  Column(children: [
+                                    SvgPicture.asset(personImg,
+                                        semanticsLabel: 'image profile',
+                                        width: 90),
+                                    Text(
+                                      JoeDoe.nombre,
+                                      style: TextStyle(fontSize: 30),
+                                    ),
+                                  ]),
+                                  ElevatedButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    AddCoffees()));
+                                      },
+                                      child: Icon(Icons.add)),
+                                ]),
                           );
                         },
-                        childCount: 20,
+                        childCount: 1,
                       ),
                     ),
                     SliverFixedExtentList(
-                      itemExtent: 50.0,
+                      itemExtent: 220.0,
                       delegate: SliverChildBuilderDelegate(
                         (BuildContext context, int index) {
                           return Container(
                             alignment: Alignment.center,
-                            color: Colors.lightBlue[100 * (index % 9)],
-                            child: Text('List Item $index'),
+                            child: CoffeCard(),
                           );
                         },
                       ),
                     ),
                   ],
                 ))));
-  }
+  }*/
 
-  /*String personImg = "assets/icons/9035990_person_circle_sharp_icon.svg";
+  String personImg = "assets/icons/9035990_person_circle_sharp_icon.svg";
   String starImg = "assets/icons/216411_star_icon.svg";
   Person JoeDoe = new Person();
 
@@ -76,15 +111,14 @@ class _PerfilState extends State<Perfil> {
       body: Center(
           child: Padding(
         padding: const EdgeInsets.all(20.0),
-        child:
-            Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
             Column(
               children: [
                 SvgPicture.asset(starImg,
                     semanticsLabel: 'calification', width: 40),
                 Text(
-                  '4.1',
+                  JoeDoe.calificacion,
                   style: TextStyle(fontSize: 20),
                 )
               ],
@@ -106,8 +140,9 @@ class _PerfilState extends State<Perfil> {
             'Tus preparaciones:',
             style: TextStyle(fontSize: 20),
           ),
+          CoffeCard(),
         ]),
       )),
     );
-  }*/
+  }
 }

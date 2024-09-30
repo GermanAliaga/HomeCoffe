@@ -71,6 +71,21 @@ class _AddCoffeesState extends State<AddCoffees> {
                   border: OutlineInputBorder(),
                   hintText: 'Describir preparación',
                 )),
+                Text(
+                  'Tiempo preparación:',
+                  style: TextStyle(fontSize: 15),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton(onPressed: () {}, child: Icon(Icons.remove)),
+                    Text(
+                      '00:00:00',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                    ElevatedButton(onPressed: () {}, child: Icon(Icons.add)),
+                  ],
+                ),
                 ElevatedButton(
                     onPressed: () {
                       Navigator.push(context,

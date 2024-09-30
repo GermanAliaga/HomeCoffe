@@ -33,20 +33,23 @@ class CoffeCard extends StatelessWidget {
                           SvgPicture.asset(personImg,
                               semanticsLabel: 'perfil image', width: 50),
                           const Text(
-                            'Affogato',
-                            style: TextStyle(fontSize: 20),
+                            '"Affogato"',
+                            style: TextStyle(
+                                fontSize: 25, fontStyle: FontStyle.italic),
                           ),
                           SvgPicture.asset(
                             starImg,
                             semanticsLabel: 'calification',
-                            width: 25,
+                            width: 35,
                           ),
                         ]),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         const Text(
-                            'Este café se prepara de la siguiente manera:\nIngredientes:\n-100 ml de café\n-Helado de vainilla\nPreparación: ...\n'),
+                          'Este café se prepara de la siguiente manera:\nIngredientes:\n-100 ml de café\n-Helado de vainilla\nPreparación: ...\n',
+                          maxLines: 10,
+                        ),
                         SvgPicture.asset(coffeImg,
                             semanticsLabel: 'Coffee image', width: 60)
                       ],
