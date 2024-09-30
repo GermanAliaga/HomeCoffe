@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:homecoffe/pages/detailcoffeecard.dart';
 
 class CoffeCard extends StatelessWidget {
   const CoffeCard({super.key});
+
+  void _goTo(BuildContext context) {}
 
   @override
   Widget build(BuildContext context) {
@@ -16,45 +19,56 @@ class CoffeCard extends StatelessWidget {
     return Scaffold(
         body: Center(
             child: Padding(
-      padding: const EdgeInsets.all(20.0),
-      child: SizedBox(
-          width: 450,
-          height: 200,
-          child: Card(
-              elevation: 10,
-              color: Color.fromARGB(248, 250, 239, 229),
-              child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          SvgPicture.asset(personImg,
-                              semanticsLabel: 'perfil image', width: 50),
-                          const Text(
-                            '"Affogato"',
-                            style: TextStyle(
-                                fontSize: 25, fontStyle: FontStyle.italic),
-                          ),
-                          SvgPicture.asset(
-                            starImg,
-                            semanticsLabel: 'calification',
-                            width: 35,
-                          ),
-                        ]),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Text(
-                          'Este café se prepara de la siguiente manera:\nIngredientes:\n-100 ml de café\n-Helado de vainilla\nPreparación: ...\n',
-                          maxLines: 10,
-                        ),
-                        SvgPicture.asset(coffeImg,
-                            semanticsLabel: 'Coffee image', width: 60)
-                      ],
-                    ),
-                  ]))),
-    )));
+                padding: const EdgeInsets.all(20.0),
+                child: SizedBox(
+                  width: 450,
+                  height: 200,
+                  child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Detailcoffeecard()));
+                      },
+                      child: Card(
+                        elevation: 10,
+                        color: Color.fromARGB(248, 250, 239, 229),
+                        child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    SvgPicture.asset(personImg,
+                                        semanticsLabel: 'perfil image',
+                                        width: 50),
+                                    const Text(
+                                      '"Affogato"',
+                                      style: TextStyle(
+                                          fontSize: 25,
+                                          fontStyle: FontStyle.italic),
+                                    ),
+                                    SvgPicture.asset(
+                                      starImg,
+                                      semanticsLabel: 'calification',
+                                      width: 35,
+                                    ),
+                                  ]),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  const Text(
+                                    'Este café se prepara de la siguiente manera:\nIngredientes:\n- 100 ml de café\n- Helado de vainilla\nPreparación: ...\n',
+                                    maxLines: 10,
+                                  ),
+                                  SvgPicture.asset(coffeImg,
+                                      semanticsLabel: 'Coffee image', width: 60)
+                                ],
+                              ),
+                            ]),
+                      )),
+                ))));
   }
 }

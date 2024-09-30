@@ -70,6 +70,7 @@ class _BottomNavigationBarExampleState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: const Text('Home'),
         leading: SearchBar(
           leading: Icon(Icons.search),
           onTap: () {
