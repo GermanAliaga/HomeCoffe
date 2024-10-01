@@ -14,7 +14,7 @@ class Products extends StatefulWidget {
 }
 
 class _ProductsState extends State<Products> {
-  List<int> bottom = <int>[0];
+  List<int> bottom = <int>[15];
 
   @override
   Widget build(BuildContext context) {
@@ -25,19 +25,17 @@ class _ProductsState extends State<Products> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
       body: CustomScrollView(
-        center: centerKey,
         slivers: <Widget>[
-          SliverList(
-            key: centerKey,
+          SliverFixedExtentList(
+            itemExtent: 250.0,
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index) {
                 return Container(
                   alignment: Alignment.center,
-                  height: 300 + bottom[index] % 4 * 20.0,
                   child: ProductsCard(),
                 );
               },
-              childCount: bottom.length,
+              childCount: 15,
             ),
           ),
         ],

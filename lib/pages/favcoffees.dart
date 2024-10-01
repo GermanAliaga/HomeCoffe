@@ -24,19 +24,17 @@ class _FavoriteCoffeesState extends State<FavoriteCoffees> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
       body: CustomScrollView(
-        center: centerKey,
         slivers: <Widget>[
-          SliverList(
-            key: centerKey,
+          SliverFixedExtentList(
+            itemExtent: 250.0,
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index) {
                 return Container(
                   alignment: Alignment.center,
-                  height: 300 + bottom[index] % 4 * 20.0,
                   child: CoffeCard(),
                 );
               },
-              childCount: bottom.length,
+              childCount: 3,
             ),
           ),
         ],

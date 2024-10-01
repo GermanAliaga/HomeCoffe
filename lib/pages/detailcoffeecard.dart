@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:homecoffe/pages/comments.dart';
 
 class Detailcoffeecard extends StatefulWidget {
   const Detailcoffeecard({super.key});
@@ -30,6 +31,10 @@ class _DetailCardState extends State<Detailcoffeecard> {
                   personImg,
                   semanticsLabel: 'profile picture',
                   width: 80,
+                ),
+                Text(
+                  'Nombre creador',
+                  style: TextStyle(fontSize: 20),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -78,6 +83,11 @@ class _DetailCardState extends State<Detailcoffeecard> {
                   '1. Preparar un shot de espresso bien caliente utilizando una máquina de espresso o una cafetera espresso.\n2. Colocar una bola de helado en una taza resistente al calor o una copa.\n3. Verter inmediatamente el espresso caliente sobre la bola de helado. El calor del café comenzará a derretir suavemente el helado.',
                   maxLines: 15,
                 ),
+                ElevatedButton(
+                  onPressed:
+                      () {}, //dentro de las {} debería de ir el Dialog :p
+                  child: const Text('Comentarios'),
+                )
               ],
             ),
           ),

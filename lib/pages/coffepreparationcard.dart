@@ -41,9 +41,17 @@ class CoffeCard extends StatelessWidget {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    SvgPicture.asset(personImg,
-                                        semanticsLabel: 'perfil image',
-                                        width: 50),
+                                    Column(
+                                      children: [
+                                        SvgPicture.asset(personImg,
+                                            semanticsLabel: 'perfil image',
+                                            width: 50),
+                                        Text(
+                                          'Nombre creador',
+                                          style: TextStyle(fontSize: 15),
+                                        )
+                                      ],
+                                    ),
                                     const Text(
                                       '"Affogato"',
                                       style: TextStyle(
