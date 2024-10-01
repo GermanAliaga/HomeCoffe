@@ -7,9 +7,7 @@ import 'package:homecoffe/pages/myhomepage.dart';
 import 'package:homecoffe/pages/productscard.dart';
 
 class Products extends StatefulWidget {
-  const Products({super.key, required this.title});
-
-  final String title;
+  const Products({super.key});
 
   @override
   State<Products> createState() => _ProductsState();

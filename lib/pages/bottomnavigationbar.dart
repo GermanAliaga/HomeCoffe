@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:homecoffe/pages/favcoffees.dart';
+import 'package:homecoffe/pages/home.dart';
 import 'package:homecoffe/pages/perfil.dart';
 import 'package:homecoffe/pages/products.dart';
 import 'package:homecoffe/pages/searchbar.dart';
@@ -17,10 +18,16 @@ class _BottomNavigationBarExampleState
   String perfilUser = "assets/icons/9035990_person_circle_sharp_icon.svg";
 
   int _selectedIndex = 0;
+
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.normal);
+
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
+    const HomePage(),
+    const FavoriteCoffees(),
+    const Products(),
+    const Perfil()
+    /*Text(
       'Index 0: Home',
       style: optionStyle,
     ),
@@ -35,54 +42,35 @@ class _BottomNavigationBarExampleState
     Text(
       'Index 4: Perfil',
       style: optionStyle,
-    )
+    )*/
   ];
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
-      if (_selectedIndex == 0) {
+      /*if (_selectedIndex == 0) {
         Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) =>
-                    FavoriteCoffees(title: 'Cafés favoritos')));
+            context, MaterialPageRoute(builder: (context) => HomePage()));
       } else if (_selectedIndex == 1) {
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) =>
-                    FavoriteCoffees(title: 'Preparaciones favoritas')));
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => FavoriteCoffees()));
       } else if (_selectedIndex == 2) {
         Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) =>
-                    Products(title: 'Productos disponibles')));
+            context, MaterialPageRoute(builder: (context) => Products()));
       } else if (_selectedIndex == 3) {
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => Perfil()));
-      }
+      }*/
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home'),
-        leading: SearchBar(
-          leading: Icon(Icons.search),
-          onTap: () {
-            setState(() {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Search()));
-            });
-          },
-        ),
-      ),
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
+      body: IndexedStack(
+        index: _selectedIndex,
+        children: _widgetOptions,
+        //child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Color.fromARGB(248, 255, 206, 160),

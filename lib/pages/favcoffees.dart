@@ -6,9 +6,7 @@ import 'package:homecoffe/pages/coffepreparationcard.dart';
 import 'package:homecoffe/pages/myhomepage.dart';
 
 class FavoriteCoffees extends StatefulWidget {
-  const FavoriteCoffees({super.key, required this.title});
-
-  final String title;
+  const FavoriteCoffees({super.key});
 
   @override
   State<FavoriteCoffees> createState() => _FavoriteCoffeesState();
