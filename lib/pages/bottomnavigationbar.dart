@@ -27,40 +27,11 @@ class _BottomNavigationBarExampleState
     const FavoriteCoffees(),
     const Products(),
     const Perfil()
-    /*Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: MyFavCoffee',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: Products',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 4: Perfil',
-      style: optionStyle,
-    )*/
   ];
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
-      /*if (_selectedIndex == 0) {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => HomePage()));
-      } else if (_selectedIndex == 1) {
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => FavoriteCoffees()));
-      } else if (_selectedIndex == 2) {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => Products()));
-      } else if (_selectedIndex == 3) {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => Perfil()));
-      }*/
     });
   }
 

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:homecoffe/pages/bottomnavigationbar.dart';
 import 'package:homecoffe/pages/iniciosesion.dart';
 import 'package:homecoffe/pages/myhomepage.dart';
+import 'package:homecoffe/pages/splashscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'HomeCoffee',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
             seedColor: const Color.fromARGB(249, 232, 169, 122)),
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         fontFamily: 'Caramel',
       ),
-      home: const Iniciosesion(title: 'Inicio de sesión'),
+      debugShowCheckedModeBanner: false,
+      home: const Splashscreen(),
     );
   }
 }

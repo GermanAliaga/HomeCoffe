@@ -84,8 +84,10 @@ class _DetailCardState extends State<Detailcoffeecard> {
                   maxLines: 15,
                 ),
                 ElevatedButton(
-                  onPressed:
-                      () {}, //dentro de las {} debería de ir el Dialog :p
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Comments()));
+                  }, //dentro de las {} debería de ir el Dialog :p
                   child: const Text('Comentarios'),
                 )
               ],

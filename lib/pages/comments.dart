@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:homecoffe/pages/coffepreparationcard.dart';
-import 'package:homecoffe/pages/personcard.dart';
+import 'package:homecoffe/pages/commentcard.dart';
 
 class Comments extends StatefulWidget {
   const Comments({super.key});
@@ -10,31 +9,31 @@ class Comments extends StatefulWidget {
 }
 
 class _CommentsState extends State<Comments> {
+  List<int> bottom = <int>[0];
+
   @override
   Widget build(BuildContext context) {
+    const Key centerKey = ValueKey<String>('bottom-sliver-list');
     return Scaffold(
-      body: Center(
-        child: CustomScrollView(
-          slivers: <Widget>[
-            SliverFixedExtentList(
-              itemExtent: 250.0,
-              delegate: SliverChildBuilderDelegate(
-                (BuildContext context, int index) {
-                  return Container(
-                    alignment: Alignment.center,
-                    child: CoffeCard(),
-                  );
-                },
-                childCount: 3,
-              ),
+      appBar: AppBar(
+        title: const Text('Comentarios'),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      ),
+      body: CustomScrollView(
+        slivers: <Widget>[
+          SliverFixedExtentList(
+            itemExtent: 250.0,
+            delegate: SliverChildBuilderDelegate(
+              (BuildContext context, int index) {
+                return Container(
+                  alignment: Alignment.center,
+                  child: Commentcard(),
+                );
+              },
+              childCount: 7,
             ),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: Text('Cerrar'))
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

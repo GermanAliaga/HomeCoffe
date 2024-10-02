@@ -5,9 +5,7 @@ import 'package:homecoffe/pages/myhomepage.dart';
 import 'package:homecoffe/pages/registrocuenta.dart';
 
 class Iniciosesion extends StatefulWidget {
-  const Iniciosesion({super.key, required this.title});
-
-  final String title;
+  const Iniciosesion({super.key});
 
   @override
   State<Iniciosesion> createState() => _IniciosesionState();
@@ -21,7 +19,7 @@ class _IniciosesionState extends State<Iniciosesion> {
     return Scaffold(
       appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: Text(widget.title)),
+          title: Text('Inicio sesión')),
       body: Center(
           child: Padding(
         padding: const EdgeInsets.all(50.0),
@@ -56,8 +54,7 @@ class _IniciosesionState extends State<Iniciosesion> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) =>
-                              Registrocuenta(title: 'Registro')));
+                          builder: (context) => Registrocuenta()));
                 },
                 child: const Text('Registrarse')),
           ],

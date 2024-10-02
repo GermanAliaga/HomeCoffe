@@ -4,9 +4,7 @@ import 'package:homecoffe/pages/bottomnavigationbar.dart';
 import 'package:homecoffe/pages/myhomepage.dart';
 
 class Registrocuenta extends StatefulWidget {
-  const Registrocuenta({super.key, required this.title});
-
-  final String title;
+  const Registrocuenta({super.key});
 
   @override
   State<Registrocuenta> createState() => _RegistrocuentaState();
@@ -20,7 +18,7 @@ class _RegistrocuentaState extends State<Registrocuenta> {
     return Scaffold(
         appBar: AppBar(
             backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-            title: Text(widget.title)),
+            title: Text('Registro')),
         body: Center(
             child: Padding(
           padding: const EdgeInsets.all(50.0),
