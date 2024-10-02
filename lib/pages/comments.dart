@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:homecoffe/pages/commentcard.dart';
+import 'package:homecoffe/pages/makecomment.dart';
 
 class Comments extends StatefulWidget {
   const Comments({super.key});
@@ -34,6 +35,13 @@ class _CommentsState extends State<Comments> {
             ),
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => Comentar()));
+        },
+        child: Icon(Icons.add),
       ),
     );
   }

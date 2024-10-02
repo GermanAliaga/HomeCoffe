@@ -17,3 +17,5 @@ Usuario: Debe ser capaz de…
   - establecer preferencias personalizadas (filtros), ya sea de preparación, ingredientes, etc
   - personalizar recetas
   - compartir experiencias
+
+Link al video de Youtube: https://youtu.be/s6dErMK9lNE
