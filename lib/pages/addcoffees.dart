@@ -88,8 +88,7 @@ class _AddCoffeesState extends State<AddCoffees> {
                 ),
                 ElevatedButton(
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Perfil()));
+                      Navigator.pop(context);
                     },
                     child: Text('Crear receta')),
               ],

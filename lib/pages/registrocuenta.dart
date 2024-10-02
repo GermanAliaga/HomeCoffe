@@ -28,7 +28,7 @@ class _RegistrocuentaState extends State<Registrocuenta> {
               SvgPicture.asset(
                 logo,
                 semanticsLabel: 'Game app',
-                width: 0,
+                width: 100,
               ),
               TextField(
                   decoration: InputDecoration(
