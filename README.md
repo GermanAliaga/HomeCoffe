@@ -9,6 +9,7 @@ Sistema: Debe de ser capaz de…
   - permitir la personalización de recetas
   - permitir que los usuarios califiquen las recetas de otros
   - mostrar el promedio de calificaciones de las recetas de los usuarios
+
 Usuario: Debe ser capaz de…
   - seleccionar y agrupar recetas favoritas
   - buscar diferentes recetas
