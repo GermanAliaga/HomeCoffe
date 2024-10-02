@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:homecoffe/pages/coffepreparationcard.dart';
 import 'package:homecoffe/pages/perfil.dart';
-import 'package:homecoffe/pages/person.dart';
+import 'package:homecoffe/models/person.dart';
 
 class AddCoffees extends StatefulWidget {
   const AddCoffees({super.key});

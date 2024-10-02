@@ -5,7 +5,7 @@ import 'package:homecoffe/pages/addcoffees.dart';
 import 'package:homecoffe/pages/coffepreparationcard.dart';
 import 'package:homecoffe/pages/favcoffees.dart';
 import 'package:homecoffe/pages/iniciosesion.dart';
-import 'package:homecoffe/pages/person.dart';
+import 'package:homecoffe/models/person.dart';
 import 'package:homecoffe/pages/personcard.dart';
 import 'package:homecoffe/pages/searchbar.dart';
 

@@ -30,9 +30,17 @@ class ProductsCard extends StatelessWidget {
                       children: [
                         SvgPicture.asset(coffeeMachineImg,
                             semanticsLabel: 'producto', width: 80),
-                        const Text(
-                          'Cafetera italiana',
-                          style: TextStyle(fontSize: 20),
+                        Column(
+                          children: [
+                            const Text(
+                              'Cafetera italiana',
+                              style: TextStyle(fontSize: 20),
+                            ),
+                            Text(
+                              'clasificación: Instrumento',
+                              style: TextStyle(fontSize: 10),
+                            )
+                          ],
                         ),
                         const Text(
                           '16.000 clps',

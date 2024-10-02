@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:homecoffe/pages/addcoffees.dart';
-import 'package:homecoffe/pages/person.dart';
+import 'package:homecoffe/models/person.dart';
 
 class PersonCard extends StatefulWidget {
   const PersonCard({super.key});
