@@ -1,16 +1,19 @@
-# homecoffe
+Se debe de crear una maqueta funcional de las pantallas de una aplicación móvil con los siguientes requerimientos:
 
-A new Flutter project.
+Sistema: Debe de ser capaz de…
+  - mostrar preparaciones de café favoritas
+  - mostrar diferentes métodos de preparación de café
+  - permitir la exploración para encontrar nuevas recetas
+  - permitir la creación de nuevas recetas/guías para diferentes tipos de café
+  - permitir la selección de preferencias (filtros), ya sea preparación, ingredientes, etc
+  - permitir la personalización de recetas
+  - permitir que los usuarios califiquen las recetas de otros
+  - mostrar el promedio de calificaciones de las recetas de los usuarios
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Usuario: Debe ser capaz de…
+  - seleccionar y agrupar recetas favoritas
+  - buscar diferentes recetas
+  - crear recetas/guías de preparaciones
+  - establecer preferencias personalizadas (filtros), ya sea de preparación, ingredientes, etc
+  - personalizar recetas
+  - compartir experiencias
