@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:homecoffe/pages/bottomnavigationbar.dart';
 import 'package:homecoffe/pages/coffepreparationcard.dart';
+import 'package:homecoffe/pages/mydrawer.dart';
 import 'package:homecoffe/pages/myhomepage.dart';
 import 'package:homecoffe/pages/searchbar.dart';
 
@@ -20,16 +21,8 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           title: const Text('Home'),
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          leading: SearchBar(
-            leading: Icon(Icons.search),
-            onTap: () {
-              setState(() {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Search()));
-              });
-            },
-          ),
         ),
+        drawer: MyDrawer(),
         body: CustomScrollView(
           slivers: <Widget>[
             SliverFixedExtentList(

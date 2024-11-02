@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:homecoffe/pages/home.dart';
 import 'package:homecoffe/pages/iniciosesion.dart';
 
 class Splashscreen extends StatefulWidget {
@@ -18,9 +19,9 @@ class _SplashScreenState extends State<Splashscreen> {
   @override
   void initState() {
     super.initState();
-    _timer = Timer(Duration(seconds: 3), () {
-      Navigator.push(context,
-          MaterialPageRoute(builder: (context) => const Iniciosesion()));
+    _timer = Timer(Duration(seconds: 4), () {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => const HomePage()));
     });
   }
 

@@ -6,6 +6,7 @@ import 'package:homecoffe/pages/coffepreparationcard.dart';
 import 'package:homecoffe/pages/favcoffees.dart';
 import 'package:homecoffe/pages/iniciosesion.dart';
 import 'package:homecoffe/models/person.dart';
+import 'package:homecoffe/pages/mydrawer.dart';
 import 'package:homecoffe/pages/personcard.dart';
 import 'package:homecoffe/pages/searchbar.dart';
 
@@ -28,6 +29,7 @@ class _PerfilState extends State<Perfil> {
         title: const Text('Perfil'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
+      drawer: MyDrawer(),
       body: CustomScrollView(
         slivers: <Widget>[
           SliverFixedExtentList(
