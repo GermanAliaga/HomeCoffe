@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:homecoffe/pages/home.dart';
-import 'package:homecoffe/pages/iniciosesion.dart';
 
 class Splashscreen extends StatefulWidget {
   const Splashscreen({super.key});
@@ -19,7 +18,7 @@ class _SplashScreenState extends State<Splashscreen> {
   @override
   void initState() {
     super.initState();
-    _timer = Timer(Duration(seconds: 4), () {
+    _timer = Timer(const Duration(seconds: 3), () {
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => const HomePage()));
     });
@@ -34,19 +33,24 @@ class _SplashScreenState extends State<Splashscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Center(
-            child:
-                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-      SvgPicture.asset(
-        coffeeMachine,
-        semanticsLabel: 'Logo',
-        width: 160,
+        body: Container(
+      width: double.infinity,
+      decoration: const BoxDecoration(
+          gradient: LinearGradient(colors: [
+        Color.fromARGB(248, 255, 206, 160),
+        Color.fromARGB(255, 153, 67, 1),
+      ], begin: Alignment.topRight, end: Alignment.bottomLeft)),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          SvgPicture.asset(
+            coffeeMachine,
+            semanticsLabel: 'Logo',
+            width: 90,
+          )
+        ],
       ),
-      Text(
-        'HomeCoffee',
-        style: TextStyle(fontSize: 50),
-      )
-    ])));
+    ));
   }
 }
 

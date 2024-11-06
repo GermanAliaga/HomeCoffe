@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:homecoffe/pages/home.dart';
+import 'package:homecoffe/pages/mibarista.dart';
 import 'package:homecoffe/pages/perfil.dart';
+import 'package:homecoffe/pages/tuopinion.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
@@ -28,6 +30,22 @@ class MyDrawer extends StatelessWidget {
               Navigator.pop(context);
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const HomePage()));
+            },
+          ),
+          ListTile(
+            title: const Text('Mi barista'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const MiBarista()));
+            },
+          ),
+          ListTile(
+            title: const Text('Tu opinión'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const TuOpinion()));
             },
           ),
           ListTile(
