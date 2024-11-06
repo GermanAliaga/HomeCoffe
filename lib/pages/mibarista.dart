@@ -29,7 +29,7 @@ class _MiBaristaState extends State<MiBarista> {
                     child: const CoffeCard(),
                   );
                 },
-                childCount: 15,
+                childCount: 1,
               ),
             ),
           ],

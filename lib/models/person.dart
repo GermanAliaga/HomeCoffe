@@ -4,7 +4,7 @@ import 'package:homecoffe/models/receta.dart';
 import 'package:homecoffe/pages/coffepreparationcard.dart';
 import 'package:homecoffe/pages/commentcard.dart';
 
-class Person {
+class Person extends ChangeNotifier {
   late String ID;
   late String nombre = "Joe Doe";
   late String calificacion = "4.6";

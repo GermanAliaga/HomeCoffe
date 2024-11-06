@@ -4,7 +4,7 @@ import 'package:homecoffe/pages/coffepreparationcard.dart';
 import 'package:homecoffe/pages/commentcard.dart';
 import 'package:homecoffe/pages/comments.dart';
 
-class Receta {
+class Receta extends ChangeNotifier {
   late String ID;
   late String nombre;
   late String calificacion;

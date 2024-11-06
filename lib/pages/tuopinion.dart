@@ -23,7 +23,7 @@ class _TuOpinionState extends State<TuOpinion> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                TextField(
+                const TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     hintText: '...',

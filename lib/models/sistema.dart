@@ -5,9 +5,9 @@ import 'package:homecoffe/pages/coffepreparationcard.dart';
 import 'package:homecoffe/pages/commentcard.dart';
 import 'package:homecoffe/pages/comments.dart';
 
-class Receta {
+class Sistema extends ChangeNotifier {
   var listaUsuarios = <Person>{};
-  var listaRecetas = <Receta>{};
+  //var listaRecetas = <Receta>{};
   var listaProductos = <Producto>{};
 }
 

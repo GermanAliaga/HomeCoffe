@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:homecoffe/pages/coffepreparationcard.dart';
 import 'package:homecoffe/pages/commentcard.dart';
 
-class Producto {
+class Producto extends ChangeNotifier {
   late String ID;
   late String nombre;
   late String clasificacion;
