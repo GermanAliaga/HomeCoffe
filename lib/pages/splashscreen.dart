@@ -37,8 +37,9 @@ class _SplashScreenState extends State<Splashscreen> {
       width: double.infinity,
       decoration: const BoxDecoration(
           gradient: LinearGradient(colors: [
-        Color.fromARGB(248, 255, 206, 160),
-        Color.fromARGB(255, 153, 67, 1),
+        Color.fromARGB(248, 255, 212, 179),
+        Color.fromARGB(248, 255, 160, 87),
+        Color.fromARGB(255, 182, 97, 33),
       ], begin: Alignment.topRight, end: Alignment.bottomLeft)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -46,7 +47,7 @@ class _SplashScreenState extends State<Splashscreen> {
           SvgPicture.asset(
             coffeeMachine,
             semanticsLabel: 'Logo',
-            width: 90,
+            width: 200,
           )
         ],
       ),
