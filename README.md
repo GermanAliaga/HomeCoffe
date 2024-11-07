@@ -1,21 +1,18 @@
-Se debe de crear una maqueta funcional de las pantallas de una aplicación móvil con los siguientes requerimientos:
+Se creo una aplicación movil que permitira a los usuarios el aprender a preparar café, ademas de identificar
+los productos e ingredientes utilizados para dichas preparaciones.
+Ademas se podra compartir las recetas a traves de diferentes plataformas, también se podra ingresar la opinión de los usuarios en relacion a la aplicacion.
 
 Sistema: Debe de ser capaz de…
-  - mostrar preparaciones de café favoritas
   - mostrar diferentes métodos de preparación de café
-  - permitir la exploración para encontrar nuevas recetas
   - permitir la creación de nuevas recetas/guías para diferentes tipos de café
-  - permitir la selección de preferencias (filtros), ya sea preparación, ingredientes, etc
   - permitir la personalización de recetas
   - permitir que los usuarios califiquen las recetas de otros
   - mostrar el promedio de calificaciones de las recetas de los usuarios
 
 Usuario: Debe ser capaz de…
-  - seleccionar y agrupar recetas favoritas
-  - buscar diferentes recetas
   - crear recetas/guías de preparaciones
-  - establecer preferencias personalizadas (filtros), ya sea de preparación, ingredientes, etc
   - personalizar recetas
-  - compartir experiencias
+  - compartir recetas
+  - implementar imagenes de apoyo para las recetas
 
-Link al video de Youtube: https://youtu.be/s6dErMK9lNE
+Link al video de Youtube: 
