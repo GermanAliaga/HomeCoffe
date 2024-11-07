@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:homecoffe/models/comentario.dart';
 import 'package:homecoffe/models/receta.dart';
-import 'package:homecoffe/pages/coffepreparationcard.dart';
-import 'package:homecoffe/pages/commentcard.dart';
 
 class Person extends ChangeNotifier {
   late String ID;
@@ -11,7 +9,7 @@ class Person extends ChangeNotifier {
   var listaRecetas = <Receta>{};
   var listaComentarios = <Comentario>{};
   var listaFavoritos = <Receta>{};
-  late Image imagenPerfil;
+  late String imagenPerfil;
   late String correo;
   late String contrasena;
 }

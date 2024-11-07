@@ -5,7 +5,6 @@ import 'package:homecoffe/models/person.dart';
 import 'package:homecoffe/models/producto.dart';
 import 'package:homecoffe/models/receta.dart';
 import 'package:homecoffe/models/sistema.dart';
-import 'package:homecoffe/pages/mibarista.dart';
 import 'package:homecoffe/pages/splashscreen.dart';
 import 'package:provider/provider.dart';
 

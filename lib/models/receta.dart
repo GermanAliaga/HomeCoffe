@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:homecoffe/models/producto.dart';
-import 'package:homecoffe/pages/coffepreparationcard.dart';
-import 'package:homecoffe/pages/commentcard.dart';
 import 'package:homecoffe/pages/comments.dart';
 
 class Receta extends ChangeNotifier {
@@ -15,7 +13,7 @@ class Receta extends ChangeNotifier {
   var listaIngredientes = <Producto>{};
   var listaInstrumentos = <Producto>{};
   var listaComentarios = <Comments>{};
-  late Image imagenRef;
+  late String imagenRef;
 }
 
 void calcularCalificacion() {
