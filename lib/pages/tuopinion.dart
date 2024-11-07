@@ -23,12 +23,6 @@ class _TuOpinionState extends State<TuOpinion> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                const TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    hintText: '...',
-                  ),
-                ),
                 ElevatedButton(
                     onPressed: () {
                       Navigator.pop(context);
