@@ -46,6 +46,7 @@ flutter:
       - assets/icons/889377_italian_coffee_machine.svg
       - assets/icons/211817_search_strong_icon.svg
       - assets/icons/Logo.svg
+      - assets/icons/Logo2.svg
 
   fonts:
     - family: Caramel
