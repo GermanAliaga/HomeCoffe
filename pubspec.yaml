@@ -38,6 +38,7 @@ flutter_launcher_icons:
   ios: true
   image_path: "assets/icons/Logo.png"
   remove_alpha_ios: true
+  adaptative_icon_background: "assets/icons/Logo.png"
 
 flutter:
 
@@ -54,6 +55,7 @@ flutter:
       - assets/icons/211817_search_strong_icon.svg
       - assets/icons/logo.svg
       - assets/icons/Logo2.svg
+      - assets/icons/Logo.png
 
   fonts:
     - family: Caramel
